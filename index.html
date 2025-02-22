@@ -1,33 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pukar Adhikari</title>
-    <link rel="stylesheet" href="./project.css">
-   
-<link rel="icon" type="image/png" sizes="16x16" href="./logo.png" />
-
+    <link rel="stylesheet" href="project.css">
 </head>
 <body>
-        <nav class="navbar">
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+        <nav>
             <ul>
-                <li><a href="#">Home</a> </li>
-                <li><a href="#">Page</a></li>
-                <li><a href="#">Resource</a></li>
-                <li><a href="#">Blog</a></li>
-               <li><a href="#">Help</a></li>
-        </ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-    <div class="tr">
-      Hello welcome to my website!!<br>
-        My name is Pukar Adhikari. I am a student in Undergraduate in Computer Engineering in Kathmandu University.
-    </div>
-   <button></button>
+    </header>
     
-<div class="footer">
-    <p class="csi">Temporary site</p>
-        <p class="csii">Needs modification</p>
-</div>
-
+    <section id="about">
+        <h2>About Me</h2>
+        <p>This is a short bio about myself.</p>
+        <p>My name is Pukar Adhikari.<br>
+            </p>
+        <p>
+           I am a student of Computer Engineering at Kathmandu University .
+        </p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="carousel">
+            <button class="prev">&#10094;</button>
+            <div class="carousel-content">
+                <div class="project">MindYourMoney</div>
+                <div class="project">Project 2</div>
+                <div class="project">Project 3</div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+    
+    <section id="blog">
+        <h2>Blog</h2>
+        <p>Recent blog posts will be displayed here.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 My Personal Website</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/pukar.adhikari.522/">Facebook</a>
+            <a href="https://github.com/pukaradhikari1">GitHub</a>
+            <a href="https://www.linkedin.com/in/pukar-adhikari-225b79296/">LinkedIn</a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
