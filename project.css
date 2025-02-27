@@ -4,12 +4,25 @@ body {
     padding: 0;
     background-color: #434242;
 }
+h1 {
+    width: 20ch;
+    white-space: nowrap;
+    margin: 0 auto;
+    overflow: hidden;
+    animation: typing 6s steps(40) infinite alternate-reverse;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 20ch; }
+    
+}
 
 header {
     background-color: hsl(203, 68%, 11%);
     color: rgb(185, 175, 175);
     padding: 1rem 0;
     text-align: center;
+    
 }
 
 header nav ul {
