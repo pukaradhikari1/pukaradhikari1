@@ -6,39 +6,86 @@
     <title>Pukar Adhikari - Personal Website</title>
     <link rel="icon" type="image/png" sizes="16x16" href="./pp.jpg" />
     <link rel="stylesheet" href="style.css" />
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            background-color: #111;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 15px;
+            border-radius: 4px;
+        }
+
+        .navbar a:hover {
+            background-color: #ff9800;
+            color: black;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a.active {
+            background-color: #ff9800;
+            color: black;
+        }
+    </style>
 </head>
 <body class="dark-mode">
     <div class="container">
         <header>
             <h1>Pukar Adhikari</h1>
             <p>Computer Engineering Student</p>
-           
         </header>
-        <section class="profile">
+
+        <!-- Navbar (Navigation Bar) -->
+        <nav class="navbar">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Profile Section with Animation -->
+        <section class="profile" data-aos="fade-down">
             <img src="pp.jpg" alt="Pukar Adhikari" />
         </section>
-        <section class="about">
+
+        <!-- About Section with Animation -->
+        <section class="about" id="about" data-aos="fade-up">
             <h2>About Me</h2>
             <p>
-                I am pursuing a Bachelor's in Computer Engineering at Kathmandu University. Passionate about technology, web development and machine.
+                I am pursuing a Bachelor's in Computer Engineering at Kathmandu University. Passionate about technology, web development, and machine learning.
             </p>
         </section>
-        <section class="projects">
+
+        <!-- Projects Section with Animation -->
+        <section class="projects" id="projects" data-aos="fade-right">
             <h2>Projects</h2>
             <div class="project-list">
-                
-                <div class="project">
-                <h3>Mind Your Money</h3>
-                <p>A project on c++ using QT as the end semester project</p>    
-                
+                <div class="project" data-aos="zoom-in">
+                    <h3>Mind Your Money</h3>
+                    <p>A project on C++ using Qt as the end semester project</p>
+                </div>
             </div>
         </section>
-        
-        <section class="contact">
+
+        <!-- Contact Section with Animation -->
+        <section class="contact" id="contact" data-aos="fade-left">
             <h2>Contact Me</h2>
             <p>You can reach me at:</p>
-            <p>Email: <a href="pukarad16@gmail.com" class="contact-link">pukaradhikari@gmail.com</a></p>
-            
+            <p>Email: <a href="mailto:pukaradhikari@gmail.com" class="contact-link">pukaradhikari@gmail.com</a></p>
         </section>
         
         <footer>
@@ -51,6 +98,12 @@
             <button id="themeToggle">Toggle Light Mode</button>
         </footer>
     </div>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS
+    </script>
 
     <script src="script.js"></script>
 </body>

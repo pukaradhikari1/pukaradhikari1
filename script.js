@@ -22,3 +22,37 @@ document.addEventListener("DOMContentLoaded", () => {
         button.textContent = theme === "dark" ? "Toggle Light Mode" : "Toggle Dark Mode";
     }
 });
+// Smooth Scroll for navbar links
+const navbarLinks = document.querySelectorAll('.navbar a');
+navbarLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the default jump
+        const targetId = this.getAttribute('href').substring(1); // Get the target section ID
+        const targetSection = document.getElementById(targetId);
+
+        // Scroll to the section smoothly
+        targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
+
+// Highlight the active section link
+window.addEventListener('scroll', () => {
+    let current = "";
+    document.querySelectorAll("section").forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 50) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navbarLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").substring(1) === current) {
+            link.classList.add("active");
+        }
+    });
+});
+
