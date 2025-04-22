@@ -1,29 +1,24 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const prevButton = document.querySelector(".prev");
-    const nextButton = document.querySelector(".next");
-    const carouselContent = document.querySelector(".carousel-content");
-    
-    let scrollPosition = 0;
-    
-    prevButton.addEventListener("click", function() {
-        scrollPosition -= 300;
-        if (scrollPosition < 0) {
-            scrollPosition = 0;
-        }
-        carouselContent.scrollTo({
-            left: scrollPosition,
-            behavior: "smooth"
-        });
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("themeToggle");
+    const body = document.body;
+
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    body.classList.remove("light-mode", "dark-mode");
+    body.classList.add(`${savedTheme}-mode`);
+    updateButtonText(savedTheme);
+
+    button.addEventListener("click", () => {
+        const isDark = body.classList.contains("dark-mode");
+        body.classList.toggle("dark-mode", !isDark);
+        body.classList.toggle("light-mode", isDark);
+
+        const newTheme = isDark ? "light" : "dark";
+        localStorage.setItem("theme", newTheme);
+        updateButtonText(newTheme);
     });
 
-    nextButton.addEventListener("click", function() {
-        scrollPosition += 300;
-        if (scrollPosition > carouselContent.scrollWidth - carouselContent.clientWidth) {
-            scrollPosition = carouselContent.scrollWidth - carouselContent.clientWidth;
-        }
-        carouselContent.scrollTo({
-            left: scrollPosition,
-            behavior: "smooth"
-        });
-    });
+    function updateButtonText(theme) {
+        button.textContent = theme === "dark" ? "Toggle Light Mode" : "Toggle Dark Mode";
+    }
 });

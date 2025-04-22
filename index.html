@@ -1,78 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pukar Adhikari</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="./logo.png" />
-    <link rel="stylesheet" href="project.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pukar Adhikari - Personal Website</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./pp.jpg" />
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <header>
-        <h1>Welcome!!</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>This is a short bio about myself.</p>
-        <p>My name is Pukar Adhikari.<br>
+<body class="dark-mode">
+    <div class="container">
+        <header>
+            <h1>Pukar Adhikari</h1>
+            <p>Computer Engineering Student</p>
+           
+        </header>
+        <section class="profile">
+            <img src="pp.jpg" alt="Pukar Adhikari" />
+        </section>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                I am pursuing a Bachelor's in Computer Engineering at Kathmandu University. Passionate about technology, web development and machine.
             </p>
-        <p>
-           I am a student of Computer Engineering at Kathmandu University .
-        </p>
-    </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="carousel">
-            <button class="prev">&#10094;</button>
-            <div class="carousel-content">
-               <a href="https://github.com/pukaradhikari1/EndSemProject-1"><div  class="project">MindYourMoney</div></a> 
-                <div class="project">Project 2</div>
-                <div class="project">Project 3</div>
+        </section>
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project-list">
+                
+                <div class="project">
+                <h3>Mind Your Money</h3>
+                <p>A project on c++ using QT as the end semester project</p>    
+                
             </div>
-            <button class="next">&#10095;</button>
-        </div>
-    </section>
-    
-    <section id="blog">
-        <h2>Blog</h2>
-        <p>Recent blog posts will be displayed here.</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        </section>
+        
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <p>You can reach me at:</p>
+            <p>Email: <a href="pukarad16@gmail.com" class="contact-link">pukaradhikari@gmail.com</a></p>
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 My Personal Website</p>
-        <div class="social-media">
-            <a href="https://www.facebook.com/pukar.adhikari.522/">Facebook</a>
-            <a href="https://github.com/pukaradhikari1">GitHub</a>
-            <a href="https://www.linkedin.com/in/pukar-adhikari-225b79296/">LinkedIn</a>
-        </div>
-    </footer>
-    
+        </section>
+        
+        <footer>
+            <p>&copy; 2025 My Personal Website</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/pukar.adhikari.522/">Facebook</a>
+                <a href="https://github.com/pukaradhikari1">GitHub</a>
+                <a href="https://www.linkedin.com/in/pukar-adhikari-225b79296/">LinkedIn</a>
+            </div>
+            <button id="themeToggle">Toggle Light Mode</button>
+        </footer>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
